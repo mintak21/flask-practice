@@ -1,0 +1,14 @@
+{% extends "basic_layout.html" %}
+{% block content %}
+
+<h3>ユーザー一覧</h3>
+{% for key, user in user_dict.items() %}
+    <ul>
+    名前: {{ user.name }}
+    年齢: {{ user.age }}
+    性別: {{ user.sex }}<br>
+    <a href="edit?user_id={{ key }}">プロフィールを編集する</a>
+    </ul>
+{% endfor %}
+<br>
+{% endblock %}

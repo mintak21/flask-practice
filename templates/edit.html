@@ -1,0 +1,11 @@
+{% extends "basic_layout.html" %}
+{% block content %}
+<h3>{{user.name}}さんのプロフィールを修正してください。</h3>
+<form action="update" method="POST">
+  キー：<input type="text" name="key" value={{user_id}} readonly="readonly"><br>
+  名前：<input type="text" name="name" value={{user.name}}><br>
+  年齢：<input type="text" name="age" value={{user.age}}><br>
+  性別：<input type="text" name="sex" value={{user.sex}}><br>
+  <input type="submit" name="" value="更新">
+</form>
+{% endblock %}
